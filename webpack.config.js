@@ -9,7 +9,8 @@ module.exports = {
     filename: 'bundle.js'
   },
   devServer: {
-    publicPath: '/public/'
+    publicPath: '/public/',
+    historyApiFallback: true // re-route 404 to the home page.
   },
   resolve: {
     extensions: ['.js', '.json']
