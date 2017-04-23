@@ -9,9 +9,7 @@ module.exports = {
     filename: 'bundle.js'
   },
   devServer: {
-    contentBase: path.join(__dirname, '/public'),
-    publicPath: '/public/',
-    historyApiFallback: true
+    publicPath: '/public/'
   },
   resolve: {
     extensions: ['.js', '.json']
