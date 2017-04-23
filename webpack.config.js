@@ -9,8 +9,9 @@ module.exports = {
     filename: 'bundle.js'
   },
   devServer: {
+    contentBase: path.join(__dirname, '/public'),
     publicPath: '/public/',
-    historyApiFallback: true // re-route 404 to the home page.
+    historyApiFallback: true
   },
   resolve: {
     extensions: ['.js', '.json']
@@ -38,10 +39,7 @@ module.exports = {
         use: [
           'style-loader',
           {
-            loader: 'css-loader',
-            options: {
-              url: false // Don't inline images
-            }
+            loader: 'css-loader'
           }
         ]
       }
