@@ -9,7 +9,8 @@ module.exports = {
     filename: 'bundle.js'
   },
   devServer: {
-    publicPath: '/public/'
+    publicPath: '/public/',
+    historyApiFallback: true
   },
   resolve: {
     extensions: ['.js', '.json']
@@ -41,7 +42,10 @@ module.exports = {
         use: [
           'style-loader',
           {
-            loader: 'css-loader'
+            loader: 'css-loader',
+            options: {
+              url: false
+            }
           }
         ]
       }
