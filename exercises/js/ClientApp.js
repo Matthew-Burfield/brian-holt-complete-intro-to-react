@@ -5,21 +5,23 @@ var MyTitle = React.createClass({
   render: function () {
     return (
       div(null,
-        h1(null, 'check out this component')
+        h1(null, this.props.title)
       )
     );
   },
 });
 
+var MyTitleFactory = React.createFactory(MyTitle);
+
 var MyFirstComponent = React.createClass({
     render: function () {
       return (
         div(null, [
-          React.createElement(MyTitle),
-          React.createElement(MyTitle),
-          React.createElement(MyTitle),
-          React.createElement(MyTitle),
-          React.createElement(MyTitle),
+          MyTitleFactory({ title: 'props are the best'}),
+          MyTitleFactory({ title: 'semicolons are the worst'}),
+          MyTitleFactory({ title: 'lol'}),
+          MyTitleFactory({ title: 'whoopa'}),
+          MyTitleFactory({ title: 'argh, stuffy monster'}),
         ])
       );
     },
