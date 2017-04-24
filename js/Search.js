@@ -1,11 +1,11 @@
 import React from 'react'
 import ShowCard from './ShowCard'
 
-const { arrayOf, shapeOf, string } = React.PropTypes
+const { arrayOf, shape, string } = React.PropTypes
 
 const Search = React.createClass({
   propTypes: {
-    shows: arrayOf(shapeOf({
+    shows: arrayOf(shape({
       title: string,
       description: string
     }))
